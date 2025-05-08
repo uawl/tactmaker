@@ -1,0 +1,20 @@
+name: CI
+
+on: push
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Node.js
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install
+      - run: bun run build.ts
+      - uses: actions/upload-artifact@v4
+        with:
+          path: out/*
+          if-no-files-found: error

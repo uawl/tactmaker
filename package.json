@@ -1,0 +1,14 @@
+{
+  "name": "tactmaker",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@oneidentity/zstd-js": "^1.0.3",
+    "open": "^10.1.2"
+  }
+}
