@@ -10,7 +10,19 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "@preact/signals": "^2.0.4",
+    "blockly": "^12.0.0",
+    "highcharts": "^12.2.0",
+    "preact": "^10.26.6",
+    "preact-render-to-string": "^6.5.13",
+    "react": "npm:@preact/compat",
+    "react-dom": "npm:@preact/compat",
+    "webview-bun": "^2.4.0",
     "yahoo-finance2": "^2.13.3",
     "yaml": "^2.8.0"
+  },
+  "scripts": {
+    "build:js": "bun run src/build.tsx",
+    "dev": "bun run build:js && bun run dist/index.js"
   }
 }
